@@ -28,7 +28,7 @@ public class Calculator {
 	 * @param value to be added to total
 	 */
 	public void add (int value) {
-		
+		total = total + value;
 	}
 	
 	/** Takes a single integer to subtract from the total
@@ -36,7 +36,7 @@ public class Calculator {
 	 * @param value to be subtracted from total
 	 */
 	public void subtract (int value) {
-		
+		total = total - value;
 	}
 	
 	/** Takes a single integer to multiply the total by
@@ -44,7 +44,7 @@ public class Calculator {
 	 * @param value to multiple the total by
 	 */
 	public void multiply (int value) {
-		
+		total = total * value;
 	}
 	
 	/** Takes a single integer to divide the total by
@@ -53,7 +53,11 @@ public class Calculator {
 	 * @param value to divide the total by
 	 */
 	public void divide (int value) {
-		
+		if (value == 0) {
+			total = 0;
+		} else {
+			total = total / value;
+		}
 	}
 	
 	/** It will return a string that has the history of operations performed
